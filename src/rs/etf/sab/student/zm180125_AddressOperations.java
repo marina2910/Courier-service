@@ -33,26 +33,6 @@ public class zm180125_AddressOperations implements AddressOperations {
             return -1;
         }
         
-        //CHECK IF ADDRESS ALREADY EXISTS
-//        String checkAddress = "select * from Adresa where Ulica = ? and Broj = ? and IdG = ?";
-//        try(PreparedStatement ps = conn.prepareStatement(checkAddress);) {
-//            ps.setString(1, ulica);
-//            ps.setInt(2, y);
-//            ps.setInt(3, IdG);
-//            
-//            try (ResultSet rs = ps.executeQuery();) {
-//                if(rs.next()) {
-//                    System.err.println("U ovom gradu vec postoji ubelezena adresa na koordinatama " + x + " i " + y);
-//                    return ret;
-//                }
-//            } catch (SQLException ex) {
-//               Logger.getLogger(zm180125_AddressOperations.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//        } catch (SQLException ex) {
-//            Logger.getLogger(zm180125_AddressOperations.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-        
-        
         String query = "insert into dbo.Adresa (Ulica, Broj, y, x, IdG) values (?, ?, ?, ?, ?)";
         try ( PreparedStatement ps = conn.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);) {
             ps.setString(1, ulica);
