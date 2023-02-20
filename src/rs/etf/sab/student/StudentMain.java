@@ -14,9 +14,9 @@ import rs.etf.sab.testing.AddressOperationsTest;
 public class StudentMain {
 
     public static void main(String[] args) {
-        AddressOperations addressOperations = new zm180125_AddressOperations(); // Change this to your implementation.
-        CityOperations cityOperations = new zm180125_CityOperations(); // Do it for all classes.
-        CourierOperations courierOperations = new zm180125_CourierOperations(); // e.g. = new MyDistrictOperations();
+        AddressOperations addressOperations = new zm180125_AddressOperations(); 
+        CityOperations cityOperations = new zm180125_CityOperations(); 
+        CourierOperations courierOperations = new zm180125_CourierOperations(); 
         CourierRequestOperation courierRequestOperation = new zm180125_CourierRequestOperation();
         DriveOperation driveOperation = new zm180125_DriveOperations();
         GeneralOperations generalOperations = new zm180125_GeneralOperations();
